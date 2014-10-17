@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation/foundation
-//= require foundation/foundation.offcanvas
-//= require_tree ./application/plugins
-//= require application/core
+//= require twitter/bootstrap
+//= require redactor-rails
+//= require admin/redactor-rails/config
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
+//= require admin/dataTables/config
+//= require_tree ./admin

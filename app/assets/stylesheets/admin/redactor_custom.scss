@@ -1,0 +1,20 @@
+/*
+
+For when you style the body of the iframe, aka everything inside the editor.
+This stylesheet needs to be enabled in the config file redactor-rails/config.js
+
+*/
+
+body {
+	font: 15px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #555;
+}
+
+.drop_cap {
+  font-size: 50px;
+  float: left;
+  line-height: 50px; 
+  padding-right: 8px; 
+  padding-left: 3px; 
+  font-family: Georgia;
+}

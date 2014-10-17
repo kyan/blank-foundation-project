@@ -1,0 +1,32 @@
+#admin_switcher {
+  margin-left: -13px;
+  padding: 10px 0;
+  >div {
+    float:left;
+    margin-left: 13px;
+    div,fieldset,form {
+      display: inline;
+    }
+  }
+  label {
+    float: left;
+    line-height: 30px;
+    margin-right: 5px;
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  form {
+    float:left;
+    margin-bottom: 0
+  }
+  .trigger {
+    display: none;
+  }
+  select {
+    font-size: 14px;
+    margin: 0;
+  }
+}

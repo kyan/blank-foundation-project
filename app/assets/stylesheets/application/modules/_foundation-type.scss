@@ -1,0 +1,355 @@
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td, figure {
+  margin: 0;
+  padding: 0; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default Link Styles */
+a {
+  color: $green;
+  text-decoration: none;
+  line-height: inherit; }
+  a:hover, a:focus {
+    color: $green; }
+  a img {
+    border: none; }
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.65rem;
+  text-rendering: optimizeLegibility; }
+  p.lead {
+    font-size: 1.62rem;
+    line-height: 1.6; }
+  p aside {
+    font-size: 1.27rem;
+    line-height: 1.35;
+    font-style: italic; }
+p+h2 { margin-top: 3rem; }
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.6rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3rem;
+  line-height: 1.1; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #6f6f6f;
+    line-height: 0; }
+
+h1 {
+  font-size: 4.2rem; font-weight: 700; }
+
+h2 {
+  font-size: 3.5rem; font-weight: 700;}
+
+h3 {
+  font-size: 1.78rem; font-weight: 700;}
+
+h4 {
+  font-size: 1.2rem; text-transform: uppercase; font-family: $proxima; font-weight: 700; color: #918f88; letter-spacing: 0.1rem; }
+
+h5 {
+  font-size: 1.53rem; letter-spacing: 0;  }
+
+h6 {
+  font-size: 1.4rem; letter-spacing: 0;  }
+
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: normal;
+  margin-top: 0.6rem;
+  margin-bottom: 0.9rem; }
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.65rem 0 1.59rem;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: normal;
+  color: #333333;
+  background-color: #f8f8f8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e0;
+  padding: 0.53rem 0.71rem 0.46rem; }
+figure {
+  margin-bottom: 1.65rem;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.65rem;
+  list-style-position: outside;
+  font-family: inherit; }
+
+ul {
+  margin-left: 1.5rem; }
+  ul.no-bullet {
+    margin-left: 0; }
+    ul.no-bullet li ul,
+    ul.no-bullet li ol {
+      margin-left: 1.65rem;
+      margin-bottom: 0;
+      list-style: none; }
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-left: 1.65rem;
+  margin-bottom: 0; }
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+ul.square {
+  list-style-type: square;
+  margin-left: 1.5rem; }
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.5rem; }
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.5rem; }
+ul.no-bullet {
+  list-style: none; }
+
+/* Ordered Lists */
+ol {
+  margin-left: 1.8rem; }
+  ol li ul,
+  ol li ol {
+    margin-left: 1.65rem;
+    margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt {
+  margin-bottom: 0.7rem;
+  font-weight: bold; }
+dl dd {
+  margin-bottom: 1.15rem; }
+
+/* Abbreviations */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help; }
+
+abbr {
+  text-transform: none; }
+
+/* Blockquotes */
+blockquote {
+  margin: 3.5rem 0 3.5rem;
+  position: relative;
+  padding-left: 8.7rem;
+  font-family: "HelveticaNeue-Thin";
+  &:before {
+    content: "“";
+    font-weight: bold;
+    line-height: 0.8;
+    color: #EAE1CE;
+    font-size: 12.5rem;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+}
+blockquote cite {
+  display: block;
+  font-family: $proxima; font-weight: 700;
+  font-size: 1.2rem;
+  color: #aca494;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+blockquote,
+blockquote p {
+  font-size: 2.5rem;
+  font-weight: 100;
+  line-height: 1.2;
+  color: #4b4a47;
+}
+
+blockquote.large, blockquote.large p {
+  font-size: 3.7rem;
+  line-height: 1.1;
+  @media #{$small-only} { 
+    font-size: 2.7rem;
+    font-weight: 300;
+  }
+}
+
+/* Microformats */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.65rem 0;
+  border: 1px solid #dddddd;
+  padding: 1.02rem 1.15rem; }
+  .vcard li {
+    margin: 0;
+    display: block; }
+  .vcard .fn {
+    font-weight: bold;
+    font-size: 1.34rem; }
+
+.vevent .summary {
+  font-weight: bold; }
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.46rem; }
+
+@media only screen and (min-width: 40.063em) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1; letter-spacing: -0.2rem; }
+
+  h1 {
+    font-size: 6.5rem;  }
+
+  h2 {
+    font-size: 3.5rem; }
+
+  h3 {
+    font-size: 2.09rem; }
+
+  h4 {
+    font-size: 1.2rem; letter-spacing: 0.1rem; }
+
+  h5 {
+    font-size: 1.53rem; letter-spacing: 0  }
+
+  h6 {
+    font-size: 1.4rem; letter-spacing: 0;  } }
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only {
+  display: none !important; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  .hide-on-print {
+    display: none !important; }
+
+  .print-only {
+    display: block !important; }
+
+  .hide-for-print {    
+    display: none !important; }
+
+  .show-for-print {
+    display: inherit !important; }
+}

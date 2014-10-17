@@ -1,0 +1,63 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+
+// For Affix plugin
+.affix {
+  position: fixed;
+}
+
+// image preview 
+img.preview {
+  border:1px solid #ccc;
+  border-radius:5px;
+  display:block;
+  margin-bottom:15px;
+  padding:20px;
+} 
+
+// Table actions 
+
+td.actions,
+th.actions {
+  width:100px;
+}
+th.position,
+td.position {
+  width:100px;
+}
+th.toogle,
+th.toogle {
+  width:80px;
+}
+
+.input {
+  margin-bottom:15px;
+}
+.input.boolean > label {
+  display:inline;
+  margin:0 0 0 10px;
+  vertical-align:middle;
+}

@@ -1,0 +1,39 @@
+$(document).ready(
+  function(){
+  var csrf_token = $('meta[name=csrf-token]').attr('content');
+  var csrf_param = $('meta[name=csrf-param]').attr('content');
+  var params;
+  if (csrf_param !== undefined && csrf_token !== undefined) {
+    params = csrf_param + "=" + encodeURIComponent(csrf_token);
+  }
+
+  dropCap = function(obj, event, key) {
+    this.insertHtml("<span class='drop_cap'>"+this.getSelectionHtml()+"</span>");
+  }
+
+  $('.redactorbox').redactor(
+    {
+      'protocol': '',
+      'buttons': ['html', '|', 'formatting', '|', 'bold', 'italic', 'deleted', '|', 
+      'unorderedlist', 'orderedlist', 'outdent', 'indent', '|', 'image', 'video', 
+      'file', 'table', 'link', '|', 'alignment', '|', 'horizontalrule'],
+      'formattingTags': ['p', 'blockquote', 'cite', 'pre', 'h1', 'h2', 'h3', 'h4'],
+      'imageUpload': '/admin/redactor_rails/pictures?' + params,
+      'imageGetJson': '/admin/redactor_rails/pictures',
+      'fileUpload': '/admin/redactor_rails/documents?' + params,
+      'fileGetJson': '/admin/redactor_rails/documents',
+      'path': '/assets/redactor-rails',
+      'fixed': true,
+      'minHeight': 300,
+      'iframe': true,
+      'css': '<%= asset_path 'admin/redactor_custom.css' %>',
+      'buttonsAdd': ['drop_caps'],
+      'buttonsCustom': {
+          'drop_caps': {
+            'title': 'Add a drop cap to the current selection', 
+            "callback": dropCap
+        }
+      }
+    }
+  );
+});

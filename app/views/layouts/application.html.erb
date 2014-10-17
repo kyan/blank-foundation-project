@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SaidsoCoUk</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=IE8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <% if content_for? :page_title %>
+      <%= yield :page_title %>
+    <% else %>
+      <title></title>
+    <% end %>
+    <%= yield :meta_tags if content_for? :meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <!--[if lt IE 10]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><%= javascript_include_tag "ie8/rem", "ie8/media.match", "ie8/respond" %><![endif]-->
+    <script type="text/javascript" src="//use.typekit.net/zxl5vjo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <%= favicon_link_tag "favicon.ico" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="<%= body_id %>">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">   
+       <nav class="tab-bar hide-for-medium-up">
+          <section class="right-small">
+          </section>
+        </nav>
+        <aside class="right-off-canvas-menu">
+          <nav class="secondary-nav-off-canvas">
+            <div class="container">
+            </div>
+          </nav>
+          <nav class="primary-nav-off-canvas">
+            <div class="container">
+            </div>
+          </nav>
+        </aside>
+        <section class="main-section">
+          <header class="page-header">
+           
+          </header>
+          <main>
+            <%= yield %>
+          </main>
+          <footer class="page-footer">
+            
+          </footer>
+        </section>
+      <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+  <%= javascript_include_tag "application" %>
+  </body>
 </html>

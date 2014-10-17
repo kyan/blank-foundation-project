@@ -1,40 +1,56 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'pg'
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'sass-rails', '~> 4.0.3'
+gem 'foundation-rails', git: 'https://BigRainbowhead:4lHvHOPNhl@github.com/kyan/foundation-rails-kyan.git'
+gem "autoprefixer-rails"
+gem "font-awesome-rails"
+gem 'coffee-rails', '~> 4.0.0'
+gem 'execjs'
+gem 'therubyracer', :platform => :ruby
+gem 'uglifier', '>= 1.3.0'
+gem 'unicorn'
+gem 'simple_form'
+gem 'acts_as_list'
+gem 'friendly_id'
+gem 'redactor-rails'
+gem 'jquery-datatables-rails'
+gem 'fog'
+gem 'unf'
+gem 'twitter-bootstrap-rails', :git => 'https://BigRainbowhead:4lHvHOPNhl@github.com/kyan/twitter-bootstrap-rails.git'
+gem 'exception_notification', :require => 'exception_notifier'
+gem 'kaminari'
+gem 'seedbank'
+gem 'newrelic_rpm'
+gem 'faker'
+gem 'validates'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :development do
+  gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'letter_opener'
+  gem 'nifty-generators'
+  gem 'foreman'
+  gem 'spring'
+end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+group :staging, :production do
+  gem 'rails_12factor'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test do
+  gem 'mocha'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end

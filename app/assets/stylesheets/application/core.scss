@@ -1,0 +1,15 @@
+// Imports
+@import "libraries/media_queries";
+
+// Fonts
+$proxima: "proxima-nova",sans-serif;
+// 400 Reg
+// 700 Bold
+
+@import "modules/colour";
+@import "foundation_and_overrides";
+@import "modules/foundation-type";
+
+html { height: auto; min-height: 100%; }
+body { font-size: 1.4rem; /* 14px */ }
+.container { @include clearfix; max-width: 970px; position: relative; margin: 0 auto; }
