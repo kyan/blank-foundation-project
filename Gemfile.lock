@@ -1,19 +1,19 @@
 GIT
-  remote: https://BigRainbowhead:4lHvHOPNhl@github.com/kyan/foundation-rails-kyan.git
-  revision: f7f73560e0d1637bc1e62a121d4933308a582e99
-  specs:
-    foundation-rails (5.3.3.1)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
-
-GIT
-  remote: https://BigRainbowhead:4lHvHOPNhl@github.com/kyan/twitter-bootstrap-rails.git
+  remote: https://github.com/kyan/twitter-bootstrap-rails.git
   revision: 2270e084d2fe0143371fd648c3a8cf4df82d252e
   specs:
     twitter-bootstrap-rails (2.2.0)
       actionpack (>= 3.1)
       execjs
       railties (>= 3.1)
+
+GIT
+  remote: https://github.com/kyan/foundation-rails-kyan.git
+  revision: 2e3816775f8144d141d0f2098b3937de19de06b4
+  specs:
+    foundation-rails (5.4.5.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
